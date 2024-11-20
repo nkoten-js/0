@@ -1,5 +1,11 @@
 
 
+'use-strict';
+
+const 
+   _ = ( ...a ) => console.log( ...a )
+;
+
 /* == [ id="sidebar-script" ] == == == == == == == == == */
 var arrow = document.querySelectorAll(".arrow");
 
@@ -47,53 +53,30 @@ $.get( "https://ipinfo.io/json", function( response ) {
 }, "jsonp" );
 
 /* botão liga/desliga */
-   $( function() {
-      // var geolocationPanelObserver = 0;
-      // $( ".geolocationSwitch" ).click( function() {
-      // 	switch( geolocationPanelObserver ) {
-      // 		case 0: $( "#geolocationPanel" ).hide();
-      // 				geolocationPanelObserver = 1;
-      // 		break;
-      // 		case 1: $( "#geolocationPanel" ).show();
-      // 				geolocationPanelObserver = 0;
-      // 		break;
-      // 	}
-      // } );
-
-      $( ".geolocationSwitch" ).click( () => {
-            $( "#geolocationPanel" ).toggle();
-            } );
-      $( ".geolocationSwitch" ).mousedown( () => {
-            this.style.cursor = "grabbing" 
-      } );
-      $( ".geolocationSwitch" ).mouseup( () => {
-            this.style.cursor = "pointer" 
-            } );
-
-
-   });
-
-
-
-
-/* == [ id="details-script" ] == == == == == == == == == */
-/*   
-$("details").on("click", function() {
-$("details[open]")
-   .not(this)
-   .removeAttr("open");
-}); 
-*/
-
+$( function() {
+   $( ".geolocationSwitch" ).click( () => {
+      $( "#geolocationPanel" ).toggle();
+   } );
+   $( ".geolocationSwitch" ).mousedown( () => {
+      this.style.cursor = "grabbing" 
+   } );
+   $( ".geolocationSwitch" ).mouseup( () => {
+      this.style.cursor = "pointer" 
+   } );
+} );
 
 
 /* == [  ] == == == == == == == == == */
 window.addEventListener( "load", ev => {
-   var 
-      amoVc = document.querySelector( "#amo-vc" ),
+   const 
+      amoVc = document.querySelector( "#amo-vc" )
+      ,
       slideshow = document.querySelector( "#slideshow" )
-      pixa = "w.jpg",
-      pixb = "x.jpg",
+      ,
+      pixA = "w.jpg"
+      ,
+      pixB = "x.jpg"
+   ;
 
    amoVc.addEventListener( "mouseenter", ev => {
       amoVc.innerHTML = "<lyh style='color: #f09;'>❤️   Lýh   ❤️</lyh>";
@@ -102,40 +85,47 @@ window.addEventListener( "load", ev => {
       amoVc.innerHTML = "Amo vc ❤️";
    } );
 
-   function pix1( f, a, b ,t ) {
+   function PixA( fn, pixA, pixB ,time ) {
       setTimeout( () => {
-         slideshow.style.backgroundImage = `url( ${a} )`;
-         f( b, (t * 2) );
-      }, t );
+         slideshow.style.backgroundImage = `url( ${pixA} )`;
+         fn( pixB, (time * 2) );
+      }, time );
    }
-   function pix2( a, t ) {
+   function PixB( pixA, time ) {
       setTimeout( () => {
-         slideshow.style.backgroundImage = `url( ${a} )`;
-         /*f( b );*/
-      }, t );
+         slideshow.style.backgroundImage = `url( ${pixA} )`;
+      }, time );
    }
 
+   function SetPixBG( props ) {
+      let 
+         pix = props.pixA
+      ;
+      pix == props.pixA ? 
+         slideshow.style.backgroundImage = pix = props.pixB 
+         : 
+         slideshow.style.backgroundImage = pix = props.pixA
+      setInterval( () => {
+         slideshow.style.backgroundImage = `url( ${ 
+            pix == props.pixA ? props.pixB : props.pixA
+         } )`;
+      }, props.time );
+   }
+   
    let list = [];
    list.length = 1000;
-
-   for( i = 1; i <= 1000; i++ ) {
-      pix1( pix2, pixa, pixb, ( i * 1000 ) );
-   }
-
-            /*
-            function f2( v ){
-         setTimeout( () => {
-            alert(2);
-            v();
-         }, 2000);
-      };
-       
-      alert("1");
-      f2( () => alert( 3 ) );
-      */
+   
+   setInterval( () => {
+      slideshow.style.backgroundImage = `url( ${ 
+         slideshow.style.backgroundImage != pixA ? 
+            slideshow.style.backgroundImage = pixB 
+            : 
+            slideshow.style.backgroundImage = pixA
+      } )`;
+   }, 1500 );
 
 } );
 
 
-    
-    
+   
+   
