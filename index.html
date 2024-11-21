@@ -881,6 +881,77 @@
                </card-spot>
             </card>
          </content>
+         <content>
+            <style>
+               card[link-tile] {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-size: 400% 400%;
+                  background-image: linear-gradient(45deg, #905 33%, #ffab00);
+                  border-radius: 1em;
+                  padding: 4px;
+                  width: clamp(150px, 100%, 350px);
+                  height: clamp(150px, 100%, 350px);
+                  aspect-ratio: 1;
+                  clip-path: polygon(0% 33px, 33px 0%, 100% 0%, 100% calc(100% - 33px), calc(100% - 33px) 100%, 0% 100%);
+                  overflow: hidden;
+                  transition: .3s;
+               }
+               card > ui {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: var(--color01);
+                  border-radius: 1em;
+                  padding: 5px;
+                  width: 100%;
+                  height: 100%;
+                  transition: .7s cubic-bezier(0.65, 0.05, 0.36, 1);
+                  clip-path: polygon(0% 33px, 33px 0%, 100% 0%, 100% calc(100% - 33px), calc(100% - 33px) 100%, 0% 100%);
+               }
+            </style>
+
+            <card link-tile>
+               <ui>
+                  <h3>IP Address:</h3>
+                  <h2 id="ip">179.110.240.133</h2>
+                  <hl6 id="hostname">179-110-240-133.dsl.telesp.net.br</hl6>
+                  <hl6 id="org">AS27699 TELEFÔNICA BRASIL S.A</hl6>
+                  <t>
+                     <t6>País: </t6>
+                     <hl6 id="country">BR</hl6>
+                  </t>
+                  <t6>Estado: </t6>
+                  <hl6 id="region">São Paulo</hl6>
+                  <t6>Cidade: </t6>
+                  <hl6 id="city">Campinas</hl6>
+                  <t6>C.E.P: </t6>
+                  <hl6 id="postal">13000-000</hl6>
+                  <hl6 id="loc">-22.9056,-47.0608</hl6>
+                  <t6>timezone: </t6>
+                  <hl6 id="timezone">America/Sao_Paulo</hl6>
+               </ui>
+            </card>
+
+            <script>
+               addEventListener( "load", () => {
+                  square.addEventListener( "click", () => {
+                     switch( square.getAttribute( 'state' ) ) {
+                        case 'a': {
+                           square.setAttribute( 'state', 'b' );
+                        } break;
+                        case 'b': {
+                           square.setAttribute( 'state', 'a' );
+                        } break;
+                        default: {
+                           square.setAttribute( 'state', 'a' );
+                        }
+                     }
+                  } );
+               } );
+            </script>
+         </content>
       </home-page>
       <cursoDe10Reais>
          <flexh>
