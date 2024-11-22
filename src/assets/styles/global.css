@@ -5,11 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Tangerine:wght@400;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    user-select: none;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   user-select: none;
 }
 
 :root {
@@ -101,6 +100,8 @@ html {
 }
 
 body {
+   display: flex;
+   flex-direction: column;
     background: var(--color00);
     height: 100%;
 }
@@ -139,8 +140,8 @@ card {
     );
     border-radius: 1rem;
     padding: 4px;
-    width: clamp( 150px, 100%, 350px );
-    height: clamp( 150px, 100%, 350px );
+    /* width: clamp( 150px, 100%, 350px );
+    height: clamp( 150px, 100%, 350px ); */
     aspect-ratio: 1;
     clip-path: polygon(
         0% 33px, 33px 0%, 
@@ -162,7 +163,7 @@ home-page {
    display: flex;
    flex: 1;
    width: calc( 100% - var( --sidebar-width ) );
-   margin: 0 0 0 auto;
+   margin: 0 0 0 auto !important;
 }
 
 content {
@@ -930,7 +931,7 @@ ul {
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend ),
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::before,
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::after {
-   margin:0; padding:0; box-sizing:border-box;
+   margin:0; box-sizing:border-box;
 }
 
 :root {
@@ -1018,8 +1019,8 @@ card[link-tile] {
    background-image: linear-gradient(45deg, #905 33%, #ffab00);
    border-radius: 1em;
    padding: 4px;
-   width: clamp(150px, 100%, 350px);
-   height: clamp(150px, 100%, 350px);
+   /* width: clamp(150px, 100%, 350px);
+   height: clamp(150px, 100%, 350px); */
    aspect-ratio: 1;
    clip-path: polygon(0% 33px, 33px 0%, 100% 0%, 100% calc(100% - 33px), calc(100% - 33px) 100%, 0% 100%);
    overflow: hidden;
