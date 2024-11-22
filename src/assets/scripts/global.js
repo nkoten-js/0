@@ -113,6 +113,10 @@ window.addEventListener( "load", ev => {
 
    GetAPI( apiList.ipify, r => _( "ipify: ", r ) );
 
+   btn_geolocationSwitch.press( () => {
+      $$( '#geolocationPanel' ).toggle();
+   } );
+
 } );
 
 
