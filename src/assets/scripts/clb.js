@@ -48,6 +48,27 @@ HTMLElement.prototype._ = function( html ) {
       return( this.innerHTML = html );
    }
 }
+HTMLElement.prototype.cssValue = function( property ) {
+   return(
+      window.getComputedStyle( 
+         this 
+      ).getPropertyValue( property )
+   );
+}
+HTMLElement.prototype.toggle = function() {
+   if( this.cssValue( "display" ) == "" ) {
+      _( "display: \"\"", this.style.display );
+      this.setAttribute( "display", "block" );
+      this.style.display = "none";
+   } else if( this.cssValue( "display" ) != "none" ) {
+      _( "display: \"\"", this.style.display );
+      this.setAttribute( "display", this.style.display );
+      this.style.display = "none";
+   } else {
+      _( "display: \"\"", this.style.display );
+      this.style.display = this.getAttribute( "display" );
+   }
+}
 
 /**
  * == [ api ] 

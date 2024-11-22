@@ -61,9 +61,14 @@ window.addEventListener( "load", ev => {
    //    amoVc.innerHTML = "Amo vc ❤️";
    // } );
 
-   /* botão liga/desliga */
-      // click()
-      $$( ".geolocationSwitch" ).addEventListener( "click", () => {
+      mark.addEventListener( "click", () => {
+         // _( "display ", window.getComputedStyle( $$( "appbar" ) ).getPropertyValue( "display" ) );
+         $$( "sidebar" ).toggle();
+         _( $$( "sidebar" ).outerHTML );
+      } );
+   /* botão liga/desliga */ /*
+      // click() .geolocationSwitch
+      $$( "mark" ).addEventListener( "click", () => {
          $$( "#geolocationPanel" ).toggle();
       } );
       // moudedown()
@@ -74,6 +79,7 @@ window.addEventListener( "load", ev => {
       $$( ".geolocationSwitch" ).addEventListener( "mouseup", () => {
          this.style.cursor = "pointer" 
       } );
+      */
 
    function PixA( fn, pixA, pixB ,time ) {
       setTimeout( () => {
