@@ -36,9 +36,9 @@ window.addEventListener( "load", ev => {
       } );
    } );
 
-   perfil.innerHTML = `ip atual: ${ip.innerHTML}`;
-   ipAtual.innerHTML = `ip atual: ${ip.innerHTML}`;
-   ipAntigo.innerHTML = `ip anterior: ${ip.innerHTML}`;
+   // perfil.innerHTML = `ip atual: ${ip.innerHTML}`;
+   // ipAtual.innerHTML = `ip atual: ${ip.innerHTML}`;
+   // ipAntigo.innerHTML = `ip anterior: ${ip.innerHTML}`;
    // ipNovo.innerHTML = ` ${ip.innerHTML}`;
 
 

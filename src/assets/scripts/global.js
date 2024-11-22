@@ -1,107 +1,44 @@
 
 
-'use-strict';
-
-/**
- * == [ propetries ] 
- * == == == == == == == == == */
-const 
-   _ = ( ...a ) => console.log( ...a )
-   ,
-   $$ = ( node, isNodes ) => {
-      if( !isNodes ) {
-         return( document.querySelector( node ) );
-      } else {
-         return( document.querySelectorAll( node ) );
-      }
-   }
-;
-
-
-/**
- * == [ prototypes ] 
- * == == == == == == == == == */
-HTMLElement.prototype.$ = function( node, isNodes ) {
-   if( !isNodes ) {
-      return( this.document.querySelector( node ) );
-   } else {
-      return( this.document.querySelectorAll( node ) );
-   }
-}
-HTMLElement.prototype.attribute = function( property, name ) {
-   if( !name ) {
-      return( this.getAttribute( property ) );
-   } else {
-      return( this.setAttribute( property, name ) );
-   }
-}
-HTMLElement.prototype.$_ = function( html ) {
-   if( !html ) {
-      return( this.innerHTML );
-   } else {
-      return( this.innerHTML = html );
-   }
-}
-
-
-
 /* == [ id="sidebar-script" ] == == == == == == == == == */
-var arrow = document.querySelectorAll(".arrow");
+var 
+   arrow = document.querySelectorAll( ".arrow" )
+   ,
+   sidebar = document.querySelector( "sidebar" )
+   ,
+   sidebarBtn = document.querySelector( ".switch" )
+;
 
 for( var i = 0; i < arrow.length; i++ ) {
    arrow[i].addEventListener("click", (e) => {
-         var arrowParent = e.target.parentElement.parentElement;
-         arrowParent.classList.toggle("showMenu");
+      var arrowParent = e.target.parentElement.parentElement;
+      arrowParent.classList.toggle("showMenu");
    });
 }
 
-var 
-   sidebar = document.querySelector("sidebar"),
-   sidebarBtn = document.querySelector(".switch");
-
 sidebarBtn.addEventListener("click", () => {
    sidebar.classList.toggle("close");
-   if(sidebar.classList.contains("close")) {
-         sidebar.classList.remove("blur");
+   if( sidebar.classList.contains("close") ) {
+      sidebar.classList.remove("blur");
    } else {
-         sidebar.classList.add("blur");
+      sidebar.classList.add("blur");
    }
 });
 
 
 
-/* == [ id="ipify-script" ] == == == == == == == == == */
-      $.getJSON("https://api.ipify.org?format=json",
-         function (data) {
-            $("#userip").html(data.ip);
-      })
-/* == == == == == == == == == */
-
 
 /* == [ id="ipinfo-script" ] == == == == == == == == == */
-$.get( "https://ipinfo.io/json", function( response ) {
-   $( "#ip" ).html( response.ip );
-   $( "#hostname" ).html( response.hostname );
-   $( "#region" ).html( response.region );
-   $( "#loc" ).html( response.loc );
-   $( "#org" ).html(response.org );
-   $( "#postal" ).html( response.postal );
-   $( "#timezone" ).html( response.timezone );
-   $( "#city" ).html( response.city );
-   $( "#country" ).html( response.country );
-}, "jsonp" );
-
-/* botão liga/desliga */
-$( function() {
-   $( ".geolocationSwitch" ).click( () => {
-      $( "#geolocationPanel" ).toggle();
-   } );
-   $( ".geolocationSwitch" ).mousedown( () => {
-      this.style.cursor = "grabbing" 
-   } );
-   $( ".geolocationSwitch" ).mouseup( () => {
-      this.style.cursor = "pointer" 
-   } );
+GetAPI( apiList.ipinfo, response => {
+   ip._( response.ip );
+   hostname._( response.hostname );
+   region._( response.region );
+   loc._( response.loc );
+   org._( response.org );
+   postal._( response.postal );
+   timezone._( response.timezone );
+   city._( response.city );
+   country._( response.country );
 } );
 
 
@@ -117,12 +54,26 @@ window.addEventListener( "load", ev => {
       pixB = "x.jpg"
    ;
 
-   amoVc.addEventListener( "mouseenter", ev => {
-      amoVc.innerHTML = "<lyh style='color: #f09;'>❤️   Lýh   ❤️</lyh>";
-   } );
-   amoVc.addEventListener( "mouseleave", ev => {
-      amoVc.innerHTML = "Amo vc ❤️";
-   } );
+   // amoVc.addEventListener( "mouseenter", ev => {
+   //    amoVc.innerHTML = "<lyh style='color: #f09;'>❤️   Lýh   ❤️</lyh>";
+   // } );
+   // amoVc.addEventListener( "mouseleave", ev => {
+   //    amoVc.innerHTML = "Amo vc ❤️";
+   // } );
+
+   /* botão liga/desliga */
+      // click()
+      $$( ".geolocationSwitch" ).addEventListener( "click", () => {
+         $$( "#geolocationPanel" ).toggle();
+      } );
+      // moudedown()
+      $$( ".geolocationSwitch" ).addEventListener( "mousedown", () => {
+         this.style.cursor = "grabbing" 
+      } );
+      // mouseup()
+      $$( ".geolocationSwitch" ).addEventListener( "mouseup", () => {
+         this.style.cursor = "pointer" 
+      } );
 
    function PixA( fn, pixA, pixB ,time ) {
       setTimeout( () => {
@@ -151,17 +102,11 @@ window.addEventListener( "load", ev => {
       }, props.time );
    }
    
-   let list = [];
-   list.length = 1000;
-   
-   setInterval( () => {
-      slideshow.style.backgroundImage = `url( ${ 
-         slideshow.style.backgroundImage != pixA ? 
-            slideshow.style.backgroundImage = pixB 
-            : 
-            slideshow.style.backgroundImage = pixA
-      } )`;
-   }, 1500 );
+   GetAPI( apiList.ipinfo, r => {
+      mark._( r.ip );
+   } );
+
+   GetAPI( apiList.ipify, r => _( "ipify: ", r ) );
 
 } );
 
