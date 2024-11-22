@@ -61,24 +61,23 @@ window.addEventListener( "load", ev => {
    //    amoVc.innerHTML = "Amo vc ❤️";
    // } );
 
-      mark.addEventListener( "click", () => {
-         // _( "display ", window.getComputedStyle( $$( "appbar" ) ).getPropertyValue( "display" ) );
-         $$( "sidebar" ).toggle();
-         _( $$( "sidebar" ).outerHTML );
-      } );
-   /* botão liga/desliga */ /*
-      // click() .geolocationSwitch
-      $$( "mark" ).addEventListener( "click", () => {
-         $$( "#geolocationPanel" ).toggle();
-      } );
-      // moudedown()
-      $$( ".geolocationSwitch" ).addEventListener( "mousedown", () => {
-         this.style.cursor = "grabbing" 
-      } );
-      // mouseup()
-      $$( ".geolocationSwitch" ).addEventListener( "mouseup", () => {
-         this.style.cursor = "pointer" 
-      } );
+   /* botão liga/desliga */ 
+   // click() .geolocationSwitch
+   $$( "mark" ).press( () => {
+      $$( "#geolocationPanel" ).toggle();
+      $$( "appbar" ).toggle();
+      _( $$( "appbar" ).outerHTML );
+   } );
+   // moudedown()
+   $$( ".geolocationSwitch" ).mousedown( () => {
+      this.style.cursor = "grabbing" 
+   } );
+   // mouseup()
+   $$( ".geolocationSwitch" ).mouseup( () => {
+      this.style.cursor = "pointer" 
+   } );
+   $$( "#ip" ).mouseenter( () => { alert( "mouseenter" ) } );
+      /*
       */
 
    function PixA( fn, pixA, pixB ,time ) {
