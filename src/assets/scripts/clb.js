@@ -43,17 +43,12 @@ HTMLElement.prototype.attribute = function( property, name ) {
 }
 HTMLElement.prototype._ = function( props ) {
    if( props.keepNodes ) {
-      _( "keepNodes" );
       return( this.innerHTML += props.html );
-   } else if( !props.html ) {
+   } else if( props.html === "undefined" ) {
       return( this.innerHTML );
-      _( "!html" );
-      // this.innerHTML;
    } else if( props.outer ) {
-      _( "outer" );
       return( this.outerHTML = props.html );
    } else {
-      _( "else" );
       return( this.innerHTML = props.html );
    }
 }

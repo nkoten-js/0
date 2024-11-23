@@ -15,15 +15,15 @@
 
 /* == [ id="ipinfo-script" ] == == == == == == == == == */
 GetAPI( apiList.ipinfo, response => {
-   ip._( response.ip );
-   hostname._( response.hostname );
-   region._( response.region );
-   loc._( response.loc );
-   org._( response.org );
-   postal._( response.postal );
-   timezone._( response.timezone );
-   city._( response.city );
-   country._( response.country );
+   ip._( { html: response.ip } );
+   hostname._( { html: response.hostname } );
+   region._( { html: response.region } );
+   loc._( { html: response.loc } );
+   org._( { html: response.org } );
+   postal._( { html: response.postal } );
+   timezone._( { html: response.timezone } );
+   city._( { html: response.city } );
+   country._( { html: response.country } );
 } );
 
 
@@ -57,7 +57,7 @@ window.addEventListener( "load", ev => {
    
    
    GetAPI( apiList.ipinfo, r => {
-      mark._( r.ip );
+      mark._( { html: r.ip } );
       _( "GetAPI oi" );
    } );
 
