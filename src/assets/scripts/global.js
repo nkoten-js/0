@@ -3,10 +3,10 @@
 /* == [ id="sidebar-script" ] == == == == == == == == == */
 var 
    arrow = document.querySelectorAll( ".arrow" )
-   ,
-   sidebar = document.querySelector( "sidebar" )
-   ,
-   sidebarBtn = document.querySelector( ".switch" )
+   // ,
+   // sidebar = document.querySelector( "sidebar" )
+   // ,
+   // sidebarBtn = document.querySelector( ".switch" )
 ;
 
 for( var i = 0; i < arrow.length; i++ ) {
@@ -16,14 +16,14 @@ for( var i = 0; i < arrow.length; i++ ) {
    });
 }
 
-sidebarBtn.addEventListener("click", () => {
-   sidebar.classList.toggle("close");
-   if( sidebar.classList.contains("close") ) {
-      sidebar.classList.remove("blur");
-   } else {
-      sidebar.classList.add("blur");
-   }
-});
+// sidebarBtn.addEventListener("click", () => {
+//    sidebar.classList.toggle("close");
+//    if( sidebar.classList.contains("close") ) {
+//       sidebar.classList.remove("blur");
+//    } else {
+//       sidebar.classList.add("blur");
+//    }
+// });
 
 
 
@@ -63,20 +63,12 @@ window.addEventListener( "load", ev => {
 
    /* botão liga/desliga */ 
    // click() .geolocationSwitch
-   $$( "mark" ).press( () => {
-      $$( "#geolocationPanel" ).toggle();
-      $$( "appbar" ).toggle();
-      _( $$( "appbar" ).outerHTML );
+   $( "mark" ).press( () => {
+      $( "#geolocationPanel" ).toggle();
+      $( "appbar" ).toggle();
+      _( $( "appbar" ).outerHTML );
    } );
-   // moudedown()
-   $$( ".geolocationSwitch" ).mousedown( () => {
-      this.style.cursor = "grabbing" 
-   } );
-   // mouseup()
-   $$( ".geolocationSwitch" ).mouseup( () => {
-      this.style.cursor = "pointer" 
-   } );
-   $$( "#ip" ).mouseenter( () => { alert( "mouseenter" ) } );
+   $( "#ip" ).mouseenter( () => { alert( "mouseenter" ) } );
       /*
       */
 
@@ -112,10 +104,6 @@ window.addEventListener( "load", ev => {
    } );
 
    GetAPI( apiList.ipify, r => _( "ipify: ", r ) );
-
-   btn_geolocationSwitch.press( () => {
-      $$( '#geolocationPanel' ).toggle();
-   } );
 
 } );
 

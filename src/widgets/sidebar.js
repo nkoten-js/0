@@ -1,0 +1,757 @@
+
+
+function SideBar( props ) {
+   return( $( 'body' )._( `
+      <sidebar class="close">
+         <logo-details>
+            <i class="switch" id="avatar">
+               <avatar />
+            </i>
+            <logo_name onclick="window.open('https://trello.com/b/AjN1KzGD/game', '_blank');">
+               Noely Gangello</logo_name>
+         </logo-details>
+         <ul class="nav-links">
+
+            <li id="EMAIL-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/gmail-logo-2561.svg" alt="email"></i>
+                     <span class="link_name">Email</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl class="link_name">Email</sHdl>
+                  </li>
+                  <li>
+                     <lnk ceo="https://outlook.live.com/mail/0/">
+                        Hotmail
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+
+                        Gmail
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://app-vlc.hotmart.com/login">
+                        Hotmart
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://dashboard.kiwify.com.br/">
+                        Kiwify
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://app.monetizze.com.br/login">
+                        Monetizze
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://ev.braip.com/login">
+                        Braip
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://portal-de-cursos-energia-solar.members.ticto.com.br/login">
+                        Ticto
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://beta.web.kyteapp.com/login">
+                        Kyte
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="FACEBOOK-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/facebook-5221.svg" alt="Facebook"></i>
+                     <span class="link_name">Facebook</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl-lnk ceo="https://web.facebook.com/" class="link_name">
+                        FaceBook</sHdl-lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://facebook.com/id">
+                        Confirmar doc
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.facebook.com/adsmanager">
+                        Conta de anúncios pessoal
+
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://business.facebook.com/adsmanager">
+
+                        BM - Gerenciador de anúncios
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://business.facebook.com/settings">
+                        Configurações da BM
+
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://www.facebook.com/creatorstudio/?reference=bizweb_more_tools_link&selected_single_page_id=105799065425661&tab=home">
+
+                        Estúdio de criação
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://business.facebook.com/create">
+                        Criar BM
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://developers.facebook.com/tools/debug">
+                        fb developers
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.facebook.com/ads/library/">
+                        Biblioteca de anúncios
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://business.facebook.com/policies_center/ads">
+                        FB Políticas de Publicidade
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://pixelscan.net/">
+                        Fingerprint
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://codepen.io/prembm/full/YzPMjaj">
+                        FB Acc Status
+                     </lnk>
+                  </li>
+                  <li>
+                     <!-- <lnk ceo="fb-tools.html', 'bg-box');">FB Tools -->
+                     <lnk ceo="fb-tools.html">FB Tools
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://docgen.nppr.team/">ID generator
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="GOOGLE-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/google-ads-svgrepo-com.svg" alt="Google"></i>
+                     <span class="link_name">Google</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl-lnk ceo="https://google.com" class="link_name">Google
+                     </sHdl-lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://ads.google.com/nav/login?subid=ALL-pt-BR-et-g-aw-c-home-awhp_xin1_signin!o2-awhp-hv-01-22">
+                        Google ADs
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://ads.google.com/aw/keywordplanner/home?ocid=896580395&__u=6208786598&__c=8207230355&authuser=0">
+                        Planejador de keywords
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://contacts.google.com/">
+                        Contatos
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.youtube.com/">
+
+                        Youtube
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://accounts.google.com/signin/v2/identifier?service=wise&passive=true&continue=http%3A%2F%2Fdrive.google.com%2F%3Futm_source%3Den&utm_medium=button&utm_campaign=web&utm_content=gotodrive&usp=gtd&ltmpl=drive&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+
+                        GDrive
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://support.google.com/google-ads/gethelp">
+                        Google Help
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://sites.google.com/new">
+                        SitesGoogle
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://myaccount.google.com/security-checkup">
+                        Verificação de segurança
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.google.com/android/find">
+                        Encontrar dispositivo
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="TABOOLA-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/smile-svgrepo-com.svg" alt="Taboola"></i>
+                     <span class="link_name">Taboola</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl class="link_name">Taboola</sHdl>
+                  </li>
+                  <li>
+                     <lnk ceo="https://backstage.taboola.com/backstage">
+                        Taboola
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="CHROME-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/chrome-dev-svgrepo-com.svg" alt="chrome store"></i>
+                     <stxt class="link_name"
+                        onclick="window.open('https://chrome.google.com/webstore/category/extensions', '_blank');">
+                        Chrome Store</stxt>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl-lnk class="link_name" ceo="https://chrome.google.com/webstore/category/extensions">
+                        Chrome Store</sHdl-lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle">
+                        Enhancer For Youtube
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=pt-br">
+                        MetaMask
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/cookie-backup-and-restore/cndobhdcpmpilkebeebeecgminfhkpcj">
+                        Cookie Backup and Restore
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm">
+                        Cookie Editor
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/facebook-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc">
+                        FB Pixel Helper
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk">
+                        GoogleTags
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/keywords-everywhere-keywo/hbapdpeemoojbophdfndmlgdhppljgmp/related?hl=pt-BR">
+                        Keywords Everywhere - Keyword Tool
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/ubersuggest-seo-and-keywo/nmpgaoofmjlimabncmnmnopjabbflegf/related?hl=pt-BR">
+                        Ubersuggest - SEO e Ideias de Palavras-Chave
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://chrome.google.com/webstore/detail/redirect-path/aomidfkchockcldhbkggjokdkkebmdll">
+                        RedirectPath
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/atomic-video-downloader/agipnmmjnjcfgkhmlgifikmibgngblop/related">
+                        Atomic Download
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/video-downloader-for-vime/cgmcdpfpkoildicgacgldinemhgmcbgp/related">
+                        Video Downloader For Vimeo
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/vimeo-record-screen-webca/ejfmffkmeigkphomnpabpdabfddeadcb">
+                        Vimeo Record - Gravador de Tela e Webcam
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://chrome.google.com/webstore/detail/page-screenshot/aoifpkjpdcfpdphnncjhgljdhpolajii">
+                        Page Snapshot
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="EDICAO-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/picture-photo-svgrepo-com.svg" alt="edição"></i>
+                     <span class="link_name">Edição</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl class="link_name">Edição</sHdl>
+                  </li>
+                  <li>
+                     <lnk ceo="https://vscode.dev/">
+                        VSCode
+                     </lnk>
+                  </li>
+                  <!-- using a theme : https://vscode.dev/theme/ceo.Sammarco
+                           using a repo  : https://vscode.dev/microsoft/vscode     -->
+                  <li>
+                     <lnk ceo="https://proelements.org">
+                        ElementorPro
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.canva.com">
+                        Canva
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.photopea.com/">
+                        Photoshop on-line
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://convertio.co/">
+                        Convert SVG
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://boxy-svg.com/app">
+                        boxy svg
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.fotor.com/photo-editor-app/editor/basic">
+                        photo-editor
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://sumo.app/paint/?lang=en">
+                        SumoPaint
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.remove.bg/upload">
+                        remove.bg
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://photolab.me/">
+                        Photolab
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://unused-css.com/tools/clip-path-generator">
+                        clip-path maker
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.pngtosvg.com">
+                        png2svg
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="http://diybookcovers.com/3Dmockups/">
+                        3d mockups
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://politicaprivacidade.com/">
+                        Gerador de políticas
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://zeoob.com/">
+                        Z
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.cssportal.com/scss-to-css/">
+                        scss 2 css
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://favicon.io/favicon-converter/">
+                        favicon converter
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.onlinedoctranslator.com/">
+                        Tradutor de pdf
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.pdfwordconvert.com/en/">
+                        conversor de pdf
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.pdfwordconvert.com/en/">
+                        splitter de pdf
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://smallpdf.com/compress-pdf/">
+                        compressor de pdf
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="HOSTGATOR-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/server-svgrepo-com.svg" alt="servidor"></i>
+                     <span class="link_name">HostGator</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl-lnk ceo="https://cliente.hostgator.com.br/" class="link_name">HostGator</sHdl-lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://br282.hostgator.com.br:2083/cpsess5769071002/frontend/paper_lantern/filemanager/index.html">
+                        gerenciador de arquivos
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://cliente.hostgator.com.br/emails-list">
+                        E-mails
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://cliente.hostgator.com.br/dominios">
+                        Domínios
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://cliente.hostgator.com.br/produtos">
+                        Produtos
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.hostgator.com.br/registro-de-dominio/">
+                        Registro de domínio
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://dash.cloudflare.com/">
+                        CloudFlare
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://systeme.io/br">
+                        Systeme.io
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.sympla.com.br">
+                        Sympla
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="VIDEOS-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/youtube-icon-svgrepo-com.svg" alt="videos"></i>
+                     <span class="link_name">Videos</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl-lnk class="link_name" ceo="cplayer.html">
+                        cplayer</sHdl-lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://api.vadoo.tv/">
+                        Vadoo
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://adilo.bigcommand.com/login/1">
+                        adilo
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://auth.vturb.com.br/oauth2/authorize?locale=pt_BR&client_id=82aad141-717e-4e5a-886e-80348b41406f&redirect_uri=https%3A%2F%2Fauth.vturb.com.br%2Fcallback&response_type=code&scope=offline_access&state=https%3A%2F%2Fapp.vturb.com.br%2F">
+                        vturb
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://auth.vidyard.com/login?rid=SyrOPdlsBJszAA">
+                        vidyard
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.hippovideo.io/users/sign_in/">
+                        hippovideo
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://snapsave.app/pt/download-private-video">SnapSave
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="SCAN-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/fingerprint-scan-svgrepo-com.svg" alt="scan"></i>
+                     <span class="link_name">SCAN</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl class="link_name">SCAN</sHdl>
+                  </li>
+                  <li>
+                     <lnk ceo="https://transparencyreport.google.com/safe-browsing/search">
+                        Google Safe Browsing
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://search.google.com/search-console/welcome?utm_source=wmx&utm_medium=deprecation-pane&utm_content=home">
+                        Google Search Console
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.virustotal.com/gui/home/url">
+                        VirusTotal
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://sitecheck.sucuri.net/">
+                        Sucuri Website Checker
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://opentip.kaspersky.com/">
+                        Kaspersky Threat Intelligence Portal
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="DROP-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/candy-shop-svgrepo-com.svg" alt="shopify"></i>
+                     <span class="link_name">DROP</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl class="link_name">DROP</sHdl>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.shopify.com.br/dropshipping">
+                        Shopify
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://adminer.pro/">
+                        ADMiner
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://app.spyhorus.com/">
+                        Spy Horus
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/koala-inspector-shopify-d/hjbfbllnfhppnhjdhhbmjabikmkfekgf">
+                        Koala Inspector
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/aliexpress-search-by-imag/jkcacbjiofjgbnaknoojjboeiinempoa?hl=pt-BR">
+                        Aliexpress Search by image
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.commerceinspector.com/">
+                        Commerce Inspector
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/ali-hunter-aliexpress-pro/mpajidobdpdigheplhpfggmeldjcpgfh">
+                        aliHunter
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://chrome.google.com/webstore/detail/my-ad-finder/jdelodjlpgkjenhcongcfdcocmjgjbci">
+                        myAdFinder
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/social-video-downloader/kbmhdphcfbllelmmdgapkpkhnoonniie">
+                        SocialVideoDownloader
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/alexa-traffic-rank/cknebhggccemgcnbidipinkifmmegdel">
+                        Alexa Traffic Rank
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk
+                        ceo="https://chrome.google.com/webstore/detail/pexgle-hunt-winning-produ/gphjjfiadngdfchoeimfdlpnhhjmddid">
+                        Pexgle
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.dsers.com">
+                        Dsers
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="SETTINGS-tab">
+               <div class="icon-link">
+                  <a>
+                     <i><img src="assets/svg/settings-svgrepo-com.svg" alt="settings"></i>
+                     <span class="link_name">Configurações</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow'></i>
+               </div>
+               <ul class="sub-menu">
+                  <li>
+                     <sHdl class="link_name">Settings</sHdl>
+                  </li>
+                  <li>
+                     <lnk class="geolocationSwitch" id="btn_geolocationSwitch" onclick="localBtnSwitch();">Liga
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://leaksradar.com/">Conferir a situação do navegador
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://www.notion.so/">
+                        Notion
+                     </lnk>
+                  </li>
+                  <li>
+                     <lnk ceo="https://sniply.io/">
+                        Sniply Encurtador
+                     </lnk>
+                  </li>
+               </ul>
+            </li>
+
+            <li id="DETAILS-tab">
+               <div class="profile-details">
+                  <div class="profile-content">
+                  </div>
+                  <div class="name-job">
+                     <div class="profile_name">Ceo Sammarco</div>
+                     <div class="job"></div>
+                  </div>
+                  <i class='bx bx-log-out'></i>
+               </div>
+            </li>
+
+         </ul>
+      </sidebar>
+   `, true ) );
+}
+
+addEventListener( "load", () => {
+   SideBar();
+   $( ".switch" ).addEventListener("click", () => {
+      $( "sidebar" ).classList.toggle("close");
+      if( $( "sidebar" ).classList.contains("close") ) {
+         $( "sidebar" ).classList.remove("blur");
+      } else {
+         $( "sidebar" ).classList.add("blur");
+      }
+   } );
+
+   // moudedown()
+   $( ".geolocationSwitch" ).mousedown( () => {
+      this.style.cursor = "grabbing" 
+   } );
+   // mouseup()
+   $( ".geolocationSwitch" ).mouseup( () => {
+      this.style.cursor = "pointer" 
+   } );
+
+   btn_geolocationSwitch.press( () => {
+      $( '#geolocationPanel' ).toggle();
+   } );
+} );
+
+console.log( "widgets/SideBar.js" );

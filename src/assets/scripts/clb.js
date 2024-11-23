@@ -8,7 +8,7 @@
 const 
    _ = ( ...a ) => console.log( ...a )
    ,
-   $$ = ( node, isNodes ) => {
+   $ = ( node, isNodes ) => {
       if( !isNodes ) {
          return( document.querySelector( node ) );
       } else {
@@ -41,11 +41,19 @@ HTMLElement.prototype.attribute = function( property, name ) {
       return( this.setAttribute( property, name ) );
    }
 }
-HTMLElement.prototype._ = function( html ) {
-   if( !html ) {
-      return( this.innerHTML );
+HTMLElement.prototype._ = function( html, keepNodes ) {
+   if( keepNodes ) {
+      // return( this.innerHTML += html );
+      this.innerHTML += html;
+      _( "keepNodes" );
+   } else if( !html ) {
+      // return( this.innerHTML );
+      this.innerHTML;
+      _( "!html" );
    } else {
-      return( this.innerHTML = html );
+      // return( this.innerHTML = html );
+      this.innerHTML = html;
+      _( "else" );
    }
 }
 HTMLElement.prototype.press = function( handler ) {
