@@ -41,18 +41,32 @@ HTMLElement.prototype.attribute = function( property, name ) {
       return( this.setAttribute( property, name ) );
    }
 }
-HTMLElement.prototype._ = function( html, keepNodes ) {
-   if( keepNodes ) {
-      // return( this.innerHTML += html );
-      this.innerHTML += html;
+HTMLElement.prototype._ = function( props ) {
+   // if( keepNodes ) {
+   //    return( this.innerHTML += html );
+   //    _( "keepNodes" );
+   // } else if( !html ) {
+   //    return( this.innerHTML );
+   //    _( "!html" );
+   // } else {
+   //    return( this.innerHTML = html );
+   //    _( "else" );
+   // }
+   if( props.keepNodes ) {
+      return( this.innerHTML += props.html );
+      // this.innerHTML += props.html;
       _( "keepNodes" );
-   } else if( !html ) {
+   } else if( !props.html ) {
       // return( this.innerHTML );
       this.innerHTML;
       _( "!html" );
+   } else if( props.outer ) {
+      return( this.outerHTML = props.html );
+      // this.outerHTML = props.html;
+      _( "outer" );
    } else {
-      // return( this.innerHTML = html );
-      this.innerHTML = html;
+      return( this.innerHTML = props.html );
+      // this.innerHTML = props.html;
       _( "else" );
    }
 }
