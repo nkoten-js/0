@@ -42,32 +42,19 @@ HTMLElement.prototype.attribute = function( property, name ) {
    }
 }
 HTMLElement.prototype._ = function( props ) {
-   // if( keepNodes ) {
-   //    return( this.innerHTML += html );
-   //    _( "keepNodes" );
-   // } else if( !html ) {
-   //    return( this.innerHTML );
-   //    _( "!html" );
-   // } else {
-   //    return( this.innerHTML = html );
-   //    _( "else" );
-   // }
    if( props.keepNodes ) {
-      return( this.innerHTML += props.html );
-      // this.innerHTML += props.html;
       _( "keepNodes" );
+      return( this.innerHTML += props.html );
    } else if( !props.html ) {
-      // return( this.innerHTML );
-      this.innerHTML;
+      return( this.innerHTML );
       _( "!html" );
+      // this.innerHTML;
    } else if( props.outer ) {
-      return( this.outerHTML = props.html );
-      // this.outerHTML = props.html;
       _( "outer" );
+      return( this.outerHTML = props.html );
    } else {
-      return( this.innerHTML = props.html );
-      // this.innerHTML = props.html;
       _( "else" );
+      return( this.innerHTML = props.html );
    }
 }
 HTMLElement.prototype.press = function( handler ) {
