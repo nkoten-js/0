@@ -155,3 +155,55 @@ async function GetAPI( api, handler ) {
    }
 
 }
+
+/**
+ * == [ localStorage ] 
+ * == == == == == == == == == */
+const 
+   Store = {
+      create: async props => {
+         /* let 
+            data = await props.data === "String" ? v : (
+               JSON.stringify( props.data )
+            ) 
+         ; */
+         let 
+            data = JSON.stringify( props.data ) 
+         ;
+         localStorage.setItem( props.key, data );
+      }
+      ,
+      update: async props => {
+         let 
+            data = JSON.stringify( props.data )
+         ;
+         
+         if( localStorage.getItem( props.key ) ) {
+            const 
+               item = [ ...JSON.parse( localStorage.getItem( props.key ) ) ]
+            ;
+            
+            item.push( data );
+            
+            localStorage.setItem( props.key, JSON.stringify( item ) );
+         } else {
+            localStorage.setItem( props.key, data );
+         }
+      }
+      ,
+      get: async props => {
+         const 
+            data = localStorage.getItem( props.key ) ? (
+               JSON.stringify( props.key )
+            ) : null
+         ;
+         return data;
+      }
+      ,
+      delete: props => {
+         localStorage.getItem( props.key ) ? (
+            localStorage.removeItem( props.key )
+         ) : null
+      }
+   }   
+;

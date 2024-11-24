@@ -23,6 +23,7 @@
       <script src="src/assets/scripts/global.js" defer></script>
       <script src="assets/scripts/lgn.js" defer></script>
       <script src="src/assets/scripts/lnks.js" defer></script>
+      <script src="src/assets/scripts/ipObserver.js" defer></script>
       <!-- == [ widgets ] -->
        <script src="./src/widgets/sidebar.js" defer></script>
    </head>
@@ -165,7 +166,19 @@
          </content>
       </home-page>
 
-
+      <footer>
+         <style>
+            footer {
+               position: fixed;
+               bottom: 0; left: var( --sidebar-width );
+               z-index: 3;
+               background: #000;
+               width: 100%;
+               padding: 1em;
+            }
+         </style>
+         <input type="submit" id="btn_update_ip" value="update ip">
+      </footer>
    </body>
 
 </html>

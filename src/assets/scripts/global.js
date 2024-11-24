@@ -1,32 +1,5 @@
 
 
-
-// sidebarBtn.addEventListener("click", () => {
-//    sidebar.classList.toggle("close");
-//    if( sidebar.classList.contains("close") ) {
-//       sidebar.classList.remove("blur");
-//    } else {
-//       sidebar.classList.add("blur");
-//    }
-// });
-
-
-
-
-/* == [ id="ipinfo-script" ] == == == == == == == == == */
-GetAPI( apiList.ipinfo, response => {
-   ip._( { html: response.ip } );
-   hostname._( { html: response.hostname } );
-   region._( { html: response.region } );
-   loc._( { html: response.loc } );
-   org._( { html: response.org } );
-   postal._( { html: response.postal } );
-   timezone._( { html: response.timezone } );
-   city._( { html: response.city } );
-   country._( { html: response.country } );
-} );
-
-
 /* == [  ] == == == == == == == == == */
 window.addEventListener( "load", ev => {
    const 
@@ -53,7 +26,7 @@ window.addEventListener( "load", ev => {
       $( "appbar" ).toggle();
       _( $( "appbar" ).outerHTML );
    } );
-   $( "#ip" ).mouseenter( () => { alert( "mouseenter" ) } );
+   // $( "#ip" ).mouseenter( () => { alert( "mouseenter" ) } );
    
    
    GetAPI( apiList.ipinfo, r => {
