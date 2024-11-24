@@ -173,30 +173,36 @@ const
          localStorage.setItem( props.key, data );
       }
       ,
-      update: async props => {
+      update: props => {
          let 
             data = JSON.stringify( props.data )
          ;
          
          if( localStorage.getItem( props.key ) ) {
-            const 
+            let 
                item = [ ...JSON.parse( localStorage.getItem( props.key ) ) ]
             ;
             
-            item.push( data );
+            item.push( JSON.parse( data ) );
             
             localStorage.setItem( props.key, JSON.stringify( item ) );
          } else {
             localStorage.setItem( props.key, data );
          }
+         // try{
+         //    return data;   
+         // } catch( err ) { _( 'err: ', err ); }
       }
       ,
-      get: async props => {
-         const 
-            data = localStorage.getItem( props.key ) ? (
-               JSON.stringify( props.key )
-            ) : null
+      get: props => {
+         let 
+            data = []
          ;
+
+         if( localStorage.getItem( props.key ) ) {
+            data = [ ...JSON.parse( localStorage.getItem( props.key ) ) ]
+         }
+
          return data;
       }
       ,
