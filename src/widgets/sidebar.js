@@ -222,21 +222,21 @@ function SideBar( props ) {
                   </ul>
                </li>
 
-               <li id="TABOOLA-tab">
+               <li id="dev-tab">
                   <div class="icon-link">
                      <a>
-                        <i><img src="assets/svg/smile-svgrepo-com.svg" alt="Taboola"></i>
-                        <span class="link_name">Taboola</span>
+                        <i><img src="assets/svg/smile-svgrepo-com.svg" alt="Dev"></i>
+                        <span class="link_name">Dev</span>
                      </a>
                      <i class='bx bxs-chevron-down arrow'></i>
                   </div>
                   <ul class="sub-menu">
                      <li>
-                        <sHdl class="link_name">Taboola</sHdl>
+                        <sHdl class="link_name">Dev</sHdl>
                      </li>
                      <li>
-                        <lnk ceo="https://backstage.taboola.com/backstage">
-                           Taboola
+                        <lnk ceo="https://app.rocketseat.com.br/classroom/aulas-3/group/fundamentos-app-router/lesson/criando-projeto-next-js-1">
+                           Rocketseat - Criando app Next.js
                         </lnk>
                      </li>
                   </ul>

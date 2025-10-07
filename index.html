@@ -1,184 +1,216 @@
 
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <title>Ceo</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- == [ css ] -->
-      <link href="assets/css/bg.css" rel="stylesheet" >
-      <link href="assets/css/lgn.css" rel="stylesheet" >
-      <link href="assets/imgs/Ceo-logo.svg" rel="icon" type="image/svg+xml" />
-      <link href="src/assets/styles/global.css" rel="stylesheet" >
-      <!-- == [ boxicons ] -->
-      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-      <!-- == [ fontawesome ] -->
-      <!-- <script src="https://kit.fontawesome.com/c4aa90ce3e.js" crossorigin="anonymous"></script> -->
-      <script src="./assets/scripts/fontawesome.js"></script>
-      <!-- == [ jquery ] -->
-      <!-- <script src="assets/scripts/jquery.js"></script> -->
-      <!-- == [ scripts ] -->
-      <script src="src/assets/scripts/clb.js" defer></script>
-      <script src="src/assets/scripts/global.js" defer></script>
-      <script src="assets/scripts/lgn.js" defer></script>
-      <script src="src/assets/scripts/lnks.js" defer></script>
-      <script src="src/assets/scripts/ipObserver.js" defer></script>
-      <!-- == [ widgets ] -->
-       <script src="./src/widgets/sidebar.js" defer></script>
-   </head>
+  <head>
+    <title>Ceo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- == [ css ] -->
+    <link href="assets/css/bg.css" rel="stylesheet" />
+    <link href="assets/css/lgn.css" rel="stylesheet" />
+    <link href="assets/imgs/Ceo-logo.svg" rel="icon" type="image/svg+xml" />
+    <link href="src/assets/styles/global.css" rel="stylesheet" />
+    <!-- == [ boxicons ] -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- == [ fontawesome ] -->
+    <!-- <script src="https://kit.fontawesome.com/c4aa90ce3e.js" crossorigin="anonymous"></script> -->
+    <script src="./assets/scripts/fontawesome.js"></script>
+    <!-- == [ jquery ] -->
+    <!-- <script src="assets/scripts/jquery.js"></script> -->
+    <!-- == [ scripts ] -->
+    <script src="src/assets/scripts/clb.js" defer></script>
+    <script src="src/assets/scripts/global.js" defer></script>
+    <script src="assets/scripts/lgn.js" defer></script>
+    <script src="src/assets/scripts/lnks.js" defer></script>
+    <script src="src/assets/scripts/ipObserver.js" defer></script>
+    <!-- == [ widgets ] -->
+    <script src="./src/widgets/sidebar.js" defer></script>
+  </head>
 
-   <body>
-      <loginScreen>
-         <div class="card-l-container" id="card-l-container">
+  <body>
+    <loginScreen>
+      <div class="card-l-container" id="card-l-container">
+        <div class="card-l" id="card-l">
+          <input type="checkbox" id="chk" aria-hidden="true" />
 
-            <div class="card-l" id="card-l">
-               <input type="checkbox" id="chk" aria-hidden="true">
+          <div class="sign-in">
+            <form>
+              <div class="times-holder">
+                <p class="times" onclick="closeNavDrawer()">&times;</p>
+              </div>
+              <label
+                for="chk"
+                class="sign-inFormLabel"
+                id="sign-inFormLabel"
+                aria-hidden="true"
+                >Acessar conta</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="Email ou telefone"
+                required=""
+              />
+              <input
+                type="password"
+                name="pswd"
+                placeholder="Senha"
+                required=""
+              />
 
-               <div class="sign-in">
-                  <form>
-                     <div class="times-holder">
-                        <p class="times" onclick="closeNavDrawer()">&times;</p>
-                     </div>
-                     <label for="chk" class="sign-inFormLabel" id="sign-inFormLabel" aria-hidden="true">Acessar
-                        conta</label>
-                     <input type="email" name="email" placeholder="Email ou telefone" required="">
-                     <input type="password" name="pswd" placeholder="Senha" required="">
+              <div class="formTextBox">
+                <nobr>
+                  <label for="manterLogado" class="text keep">
+                    <div class="clear"></div>
+                    <input
+                      type="checkbox"
+                      id="manterLogado"
+                      name="Mantenha-me logado"
+                    />
+                    <span>Mantenha-me logado</span>
+                  </label>
+                </nobr>
+              </div>
+              <div class="formTextBox">
+                <label for="forgotPass" class="text">
+                  Esqueçeu sua senha?
+                  <a href="" id="forgotPass">recupere aqui</a>
+                </label>
+              </div>
+              <button class="sign-in-button">ENTRAR</button>
+            </form>
+          </div>
+          <!-- sign-in -->
 
-                     <div class="formTextBox">
-                        <nobr>
-                           <label for="manterLogado" class="text keep">
-                              <div class="clear"></div>
-                              <input type="checkbox" id="manterLogado" name="Mantenha-me logado">
-                              <span>Mantenha-me logado</span>
-                           </label>
-                        </nobr>
-                     </div>
-                     <div class="formTextBox">
-                        <label for="forgotPass" class="text">
-                           Esqueçeu sua senha? <a href="" id="forgotPass">recupere aqui</a>
-                        </label>
-                     </div>
-                     <button class="sign-in-button">ENTRAR</button>
-                  </form>
-               </div> <!-- sign-in -->
+          <div class="sign-up" id="sign-up">
+            <form>
+              <label for="chk" class="sign-upFormLabel" aria-hidden="true"
+                ><span id="sign-upText0" onclick="signUpText0()"
+                  >Cadastre-se aqui!</span
+                ><span id="sign-upText1" onclick="signUpText1()"
+                  >Boas vindas!</span
+                >
+              </label>
+              <input
+                type="text"
+                name="txt"
+                placeholder="Nome de usuário"
+                required=""
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+              />
+              <input
+                type="password"
+                name="pswd"
+                placeholder="Senha"
+                required=""
+              />
+              <input
+                type="tel"
+                name=""
+                id="telefone"
+                placeholder="Telefone"
+                pattern="\(\d{2}\)\s*\d{5}-\d{4}"
+                maxlength="15"
+                required
+              />
+              <button class="sign-up-button">REGISTRAR</button>
+            </form>
+          </div>
+          <!-- sigin-up -->
+        </div>
+        <!-- card-l -->
+      </div>
+    </loginScreen>
 
+    <sidebar id="sidebar"></sidebar>
 
-               <div class="sign-up" id="sign-up">
-                  <form>
-                     <label for="chk" class="sign-upFormLabel" aria-hidden="true"><span id="sign-upText0"
-                           onclick="signUpText0()">Cadastre-se aqui!</span><span id="sign-upText1"
-                           onclick="signUpText1()">Boas vindas!</span> </label>
-                     <input type="text" name="txt" placeholder="Nome de usuário" required="">
-                     <input type="email" name="email" placeholder="Email" required="">
-                     <input type="password" name="pswd" placeholder="Senha" required="">
-                     <input type="tel" name="" id="telefone" placeholder="Telefone" pattern="\(\d{2}\)\s*\d{5}-\d{4}"
-                        maxlength="15" required>
-                     <button class="sign-up-button">REGISTRAR</button>
-                  </form>
-               </div> <!-- sigin-up -->
+    <appbar>
+      <appbar-e></appbar-e>
+      <appbar-c onclick="openNavDrawer();">
+        <appbar-c-text> Noely </appbar-c-text>
+      </appbar-c>
+      <appbar-d></appbar-d>
+    </appbar>
+    <home-page>
+      <search-bar>
+        <ui>
+          <label>
+            <icon id="btn_search">
+              <i class="bx bx-search"></i>
+            </icon>
+            <input type="text" id="input_search" />
+          </label>
+        </ui>
+      </search-bar>
+      <content>
+        <card link-tile native id="geolocationPanel">
+          <ui>
+            <t>
+              <t5>IP Address: </t5>
+              <t3 id="ip"></t3>
+            </t>
+            <t id="hostname" center></t>
+            <t id="org" center></t>
+            <t>
+              <t5>País: </t5>
+              <t id="country"></t>
+            </t>
+            <t>
+              <t5>Estado: </t5>
+              <t id="region"></t>
+            </t>
+            <t>
+              <t5>Cidade: </t5>
+              <t id="city"></t>
+            </t>
+            <t>
+              <t5>C.E.P: </t5>
+              <t id="postal"></t>
+            </t>
+            <t>
+              <t5>loc: </t5>
+              <t id="loc"></t>
+            </t>
+            <t>
+              <t5>timezone: </t5>
+              <t id="timezone"></t>
+            </t>
+          </ui>
+        </card>
+        <card>
+          <card-spot>
+            <!-- <t>Sammarco</t> -->
+          </card-spot>
+        </card>
+        <card>
+          <card-spot>
+            <mark id="mark">oi</mark>
+          </card-spot>
+        </card>
+      </content>
+    </home-page>
 
-
-            </div> <!-- card-l -->
-         </div>
-      </loginScreen>
-
-      <sidebar id="sidebar"></sidebar>
-
-      <appbar>
-         <appbar-e></appbar-e>
-         <appbar-c onclick="openNavDrawer();">
-            <appbar-c-text>
-               Noely
-            </appbar-c-text>
-         </appbar-c>
-         <appbar-d></appbar-d>
-      </appbar>
-      <home-page>
-         <search-bar>
-            <ui>
-               <label>
-                  <icon id="btn_search">
-                     <i class="bx bx-search"></i>
-                  </icon>
-                  <input type="text" id="input_search">
-               </label>
-            </ui>
-         </search-bar>
-         <content >
-
-            <card link-tile native id="geolocationPanel">
-               <ui>
-                  <t>
-                     <t5>IP Address: </t5>
-                     <t3 id="ip"></t3>
-                  </t>
-                  <t id="hostname" center></t>
-                  <t id="org" center></t>
-                  <t>
-                     <t5>País: </t5>
-                     <t id="country"></t>
-                  </t>
-                  <t>
-                     <t5>Estado: </t5>
-                     <t id="region"></t>
-                  </t>
-                  <t>
-                     <t5>Cidade: </t5>
-                     <t id="city"></t>
-                  </t>
-                  <t>
-                     <t5>C.E.P: </t5>
-                     <t id="postal"></t>
-                  </t>
-                  <t>
-                     <t5>loc: </t5>
-                     <t id="loc"></t>
-                  </t>
-                  <t>
-                     <t5>timezone: </t5>
-                     <t id="timezone"></t>
-                  </t>
-               </ui>
-            </card>
-            <card>
-               <card-spot>
-                  <!-- <t>Sammarco</t> -->
-               </card-spot>
-            </card>
-            <card>
-               <card-spot>
-                  <!-- <center>
-                           <form action="">
-                              <h1 id="perfil"></h1>
-                              <input type="text">
-                              <br>
-                              <label for="" id="ipAtual"></label>
-                              <br>
-                              <label id="ipAntigo"></label>
-                              <br>
-                              <label id="ipNovo"></label>
-                           </form>
-                        </center> -->
-                  <mark id="mark">oi</mark>
-               </card-spot>
-            </card>
-         </content>
-      </home-page>
-
-      <footer>
-         <style>
-            footer {
-               position: fixed;
-               bottom: 0; left: var( --sidebar-width );
-               z-index: 3;
-               background: #000;
-               width: 100%;
-               padding: 1em;
-            }
-         </style>
-         <input type="submit" id="btn_update_ip" value="update ip">
-      </footer>
-   </body>
-
+    <footer>
+      <style>
+        footer {
+          position: fixed;
+          bottom: 0;
+          left: var(--sidebar-width);
+          z-index: 3;
+          background: #000;
+          width: 100%;
+          padding: 1em;
+        }
+      </style>
+      <input type="submit" id="btn_update_ip" value="update ip" />
+    </footer>
+  </body>
 </html>
