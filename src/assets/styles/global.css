@@ -12,11 +12,21 @@
 }
  
 .ceo-colors {
+  /* --base:    #22202b; */
+  /* --overlay: #181621; */
+  /* --layout:  #22202c; */
+  /* --ui:      #282630; */
+  /**/
+  /* --base:    #22202b; */
+  /* --overlay: #18161e; */
+  /* --layout:  #1d1b23; */
+  /* --ui:      #232129; */
+
   --base:    #22202b;
-  --overlay: #181621;
-  --layout:  #22202c;
-  --ui:      #282630;
-  
+  --overlay: #161;
+  --layout:  #1e1e2e;
+  --ui:      #2e2e3e;
+
   --base-0:    #212329;
   --overlay-0: #18161c;
   --layout-0:  #1b1d22;
@@ -28,6 +38,12 @@
   --nk-overlay: #181621;
   --nk-layout:  #22202c;
   --nk-ui:      #282630;
+
+
+  --nk-base:    #22202b;
+  --nk-overlay: #18161e;
+  --nk-layout:  #222028;
+  --nk-ui:      #232129;
 
     --color:   #16181c;
     --color00: #1b1d22;
