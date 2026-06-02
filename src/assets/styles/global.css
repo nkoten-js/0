@@ -11,7 +11,24 @@
    user-select: none;
 }
 
+.ceo-colors {
+  --base:    #22202b;
+  --overlay: #181621;
+  --layout:  #22202c;
+  --ui:      #282630;
+  
+  --base-0:    #212329;
+  --overlay-0: #18161c;
+  --layout-0:  #1b1d22;
+  --ui-0:      #212329;
+}
+
 :root {
+  --nk-base:    #22202c;
+  --nk-overlay: #181621;
+  --nk-layout:  #22202c;
+  --nk-ui:      #282630;
+
     --color:   #16181c;
     --color00: #1b1d22;
     --color01: #212329;
@@ -115,7 +132,7 @@ html {
 body {
    display: flex;
    flex-direction: column;
-    background: var(--color00);
+    background: var(--nk-layout);
     height: 100%;
 }
 
@@ -250,8 +267,7 @@ search-bar {
 search-bar > ui {
    display: flex;
    align-items: center;
-   background: var(--color03);
-   background: #212329;
+   background: var(--nk-layout);
    border-radius: 24px;
    width: calc( 100% - 1em );
    height: calc( 100% - 1em );
@@ -419,7 +435,7 @@ appbar {
     position: sticky;
     top: 0;
     background-image: linear-gradient(0deg, rgb(174, 21, 57) 0%, rgb(144, 64, 11) 100%);
-    background: var(--ceo-c3);
+    background: var(--nk-overlay);
     box-shadow: #0009 0 0 10px;
 }
 
@@ -469,6 +485,7 @@ sidebar {
     width: 260px;
     /* background: linear-gradient(45deg, #000, #1f0413, #1f0413); */
     background: #16181ccc;
+    background: #181621cc;
     z-index: 100;
     transition: all .5s cubic-bezier(0.68, -0.55, 0, 1.31);
     /* box-shadow: #0005 0 0 5px; */
@@ -477,7 +494,7 @@ sidebar {
 sidebar.close {
     width: 68px;
     background: #002429;
-    background: var(--color);
+    background: var(--nk-overlay);
 }
 
 .blur {
@@ -1095,7 +1112,7 @@ card > ui {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background: var(--color01);
+   background: var(--nk-ui);
    border-radius: 1em;
    padding: 5px;
    width: 100%;
